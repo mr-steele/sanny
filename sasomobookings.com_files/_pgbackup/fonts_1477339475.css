@@ -1,0 +1,54 @@
+@font-face {
+    font-family: Arvo-Bold;
+    local: Arvo-Bold;
+
+    src: url(../fonts/Arvo-Bold.ttf);
+}
+@font-face {
+    font-family: Arvo-BoldItalic;
+    local: Arvo-BoldItalic;
+
+    src: url(../fonts/Arvo-BoldItalic.ttf);
+}
+@font-face {
+    font-family: Arvo-Italic;
+    local: Arvo-Italic;
+
+    src: url(../fonts/Arvo-Italic.ttf);
+}
+@font-face {
+    font-family: Arvo-Regular;
+    local: Arvo-Regular;
+
+    src: url(../fonts/Arvo-Regular.ttf);
+}
+@font-face {
+    font-family: Montserrat-Bold;
+    local: Montserrat-Bold;
+
+    src: url(../fonts/Montserrat-Bold.ttf);
+}
+@font-face {
+    font-family: Montserrat-Regular;
+    local: Montserrat-Regular;
+
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+.Arvo-Bold{
+    font-family: Arvo-Bold;
+}
+.Arvo-BoldItalic{
+    font-family: Arvo-BoldItalic;
+}
+.Arvo-Italic{
+    font-family: Arvo-Italic;
+}
+.Arvo-Regular{
+    font-family: Arvo-Regular;
+}
+.Montserrat-Bold{
+    font-family: Montserrat-Bold;
+}
+.Montserrat-Regular{
+    font-family: Montserrat-Regular;
+}
