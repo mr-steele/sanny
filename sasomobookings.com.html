@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://www.sasomobookings.com/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width = 1300">
+        <meta name="description" content="SASOMObookings Berlin">
+        <title>sasomobookings.com</title>
+
+        <!-- Bootstrap -->
+        <link href="./sasomobookings.com_files/bootstrap.min.css" rel="stylesheet">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="./sasomobookings.com_files/jquery.js.Download"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+        <link type="text/css" rel="stylesheet" href="./sasomobookings.com_files/jquery.fancybox-1.3.4.css" media="screen">
+        <script type="text/javascript" src="./sasomobookings.com_files/jquery.fancybox-1.3.4.js.Download"></script>
+        <script type="text/javascript" src="./sasomobookings.com_files/jquery.fancybox-1.3.4.pack.js.Download"></script>
+        <script type="text/javascript" src="./sasomobookings.com_files/jquery.mousewheel-3.0.4.pack.js.Download"></script>
+        <script type="text/javascript" src="./sasomobookings.com_files/jquery.easing-1.3.pack.js.Download"></script>
+
+        <!-- Font-Awesome -->
+        <link href="./sasomobookings.com_files/font-awesome.min.css" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="./sasomobookings.com_files/customize.css" media="screen">
+        <link type="text/css" rel="stylesheet" href="./sasomobookings.com_files/fonts.css" media="screen">
+        <link type="text/css" rel="stylesheet" href="./sasomobookings.com_files/parallax.css" media="screen">
+        <script src="./sasomobookings.com_files/bootstrap.min.js.Download"></script>
+        <script type="text/javascript">
+    jQuery(document).ready(function() { 
+        scroll();
+        $("#skrollr-body").remove();
+        var anzA = $(".header_menu_hidden").children(".headLi").children("a").length;
+        if (anzA > 0){
+            funcNext($(".header_menu_hidden").children(".headLi"), anzA,0, anzA);
+        }
+    });
+
+    (function($) {
+        
+    })(jQuery);
+
+    function funcNext(aEL, anz, ajaxContainerCounter,linksAnz) {
+        var anz = anz - 1;
+        var linkToLoad = aEL.children("a").attr("href");
+        var forParameter = aEL.next();
+        var str = linkToLoad;
+        $("#ajaxContainer" + ajaxContainerCounter).load(linkToLoad, function() {
+            if (linksAnz-1 != anz){
+                $("#ajaxContainer" + ajaxContainerCounter).css("padding-top","50px");
+            }
+            if (anz >= 1){
+                ajaxContainerCounter = ajaxContainerCounter +1;
+                funcNext(forParameter, anz,ajaxContainerCounter);
+            }else{
+                $("#skrollr-body").remove();
+                scroll();
+                $('#blogSlide').on('slide.bs.carousel', function () {
+                    $('#blogSlide').carousel('pause');
+                });
+                $('#blogSlide').on('slid.bs.carousel', function () {
+                    reskrollr();
+                });
+                $('#carouselStart').carousel({
+                    interval: 3000
+                });
+                /*$("#single-artist").change("DOMSubtreeModified", function() {      
+                    reskrollr();
+                });*/
+                reskrollr();
+            }
+        });
+    }
+
+    function reskrollr(){
+            }
+
+    function scroll() {
+        $('a[data-scroll="smooth"]').click(function(){
+            $('html, body').animate({
+                scrollTop: $( $.attr(this, 'href') ).offset().top
+            }, 500);
+            return false;
+        });
+    }
+</script>
+        <script type="text/javascript" src="./sasomobookings.com_files/jquery.jfeed.pack.js.Download"></script>
+    </head>
+    <body id="body">
+        <div style="z-index: -10;" class="parallax-image-wrapper parallax-image-wrapper-50" data-anchor-target="#artists + .gap" data-bottom-top="transform:translate3d(0px, 300%, 0px)" data-top-bottom="transform:translate3d(0px, 0%, 0px)">
+            <div class="parallax-image parallax-image-50" style="background-image:url(http://www.sasomobookings.com/cm-themes/sasomo/includes/img/slider/berlin.jpg)" data-anchor-target="#artists + .gap" data-bottom-top="transform: translate3d(0px, -60%, 0px);" data-top-bottom="transform: translate3d(0px, 60%, 0px);">           
+            </div>
+        </div>
+
+                <div style="height: 100px;">
+    <header class="navbar-fixed-top" style="background-color: white;">
+        <div class="container">
+            <div id="head" class="">
+                <div class="pull-left">
+                    <img src="./sasomobookings.com_files/logo-head.png">
+                </div>
+                <div class="pull-right" id="navigation">
+                    <ul class="list-inline Montserrat-Regular">
+                                                                            <li><a href="http://www.sasomobookings.com/#ajaxContainer0" data-scroll="smooth">HOME</a></li>
+                                                    <li><a href="http://www.sasomobookings.com/#ajaxContainer1" data-scroll="smooth">ARTISTS</a></li>
+                                                    <li><a href="http://www.sasomobookings.com/#ajaxContainer2" data-scroll="smooth">NEWS</a></li>
+                                                    <li><a href="http://www.sasomobookings.com/#ajaxContainer3" data-scroll="smooth">ABOUT</a></li>
+                                                    <li><a href="http://www.sasomobookings.com/#ajaxContainer4" data-scroll="smooth">BOOKING</a></li>
+                                                    <li><a href="http://www.sasomobookings.com/#ajaxContainer5" data-scroll="smooth">CONTACT</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>
+                    
+                    
+<div class="hidden">
+                <ul class="header_menu_hidden">
+                            <li class="headLi"><a class="" href="http://www.sasomobookings.com/index.php?mod=slider&amp;ajax&amp;forTop=0"></a></li>
+                            <li class="headLi"><a class="" href="http://www.sasomobookings.com/index.php?mod=artists&amp;ajax&amp;forTop=1"></a></li>
+                            <li class="headLi"><a class="" href="http://www.sasomobookings.com/index.php?mod=blog&amp;ajax&amp;forTop=2"></a></li>
+                            <li class="headLi"><a class="" href="http://www.sasomobookings.com/index.php?mod=about&amp;ajax&amp;forTop=3"></a></li>
+                            <li class="headLi"><a class="" href="http://www.sasomobookings.com/index.php?mod=booking&amp;ajax&amp;forTop=4"></a></li>
+                            <li class="headLi"><a class="" href="http://www.sasomobookings.com/index.php?mod=contact&amp;ajax&amp;forTop=5"></a></li>
+                    </ul>
+    </div>
+        <!-- Content Container -->
+                                                <div style="margin-top: 0px;" id="ajaxContainer0">
+<div class="slider" style="">
+            <div id="carouselStart" class="slide" data-ride="carousel">
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                                                    <div class="item active text-center" style="width: 100%;">
+                        <img src="./sasomobookings.com_files/SliderBerlin.jpg" style="width: 100%;">
+                    </div>
+                            </div>
+            <style>
+                #logo-text{
+                    top: 330px;
+                }
+                #logo{
+                    width: 450px;
+                }
+                @media (max-width: 1600px){
+                    #logo-text{
+                        top: 250px;
+                    }
+                }
+                @media (max-width: 1280px){
+                    #logo-text{
+                        top: 200px;
+                    }
+                }
+            </style>
+            <div id="logo-text" style="min-width: 1200px;">
+                <img src="./sasomobookings.com_files/logo.png" id="logo"><br><br>
+                <p class="Montserrat-Regular">BOOKING AGENCY - ARTIST MANAGEMENT</p>
+                <br>
+                <div class="Arvo-Italic">
+                    <a href="http://www.facebook.com/SASOMOBOOKINGS" target="_blank">facebook</a> / <a href="http://gigs.gigatools.com/g/SASOMObookings" target="_blank">gigatools</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<span class="bar"></span>
+<div class="foo"></div></div>
+                            <div style="margin-top: 0px; padding-top: 50px;" id="ajaxContainer1">
+        
+    <div id="artists" style="padding-top: 100px;" class="clearfix">
+        <div class="heading container">
+            <h1>ARTISTS</h1> 
+            <p>An eye for details makes our work excellent</p>
+            <img src="./sasomobookings.com_files/line-head.png">
+        </div>
+        <style>
+        </style>
+        <div class="container">
+            <div class="row no-padding img-hover" style="position: relative;">
+                                                    <div style="border: 1px solid white;" class="col-xs-3 artist-col" data-hidden="false" data-div-id="1">
+                        <a href="http://www.sasomobookings.com/#single-artist" data-scroll="smooth" class="loadartist" data-artist-id="17">                                                            <div style="background-color: rgba(31,33,39,0.4); height: 227px; width: 323px; position: absolute;"></div>
+                                                                                    <div class="inner-img text-center hidden">
+                                <i class="fa fa-2x fa-eye"></i>
+                                <div>
+                                    <p class="Montserrat-Regular">ATISH</p>
+                                    <p class="Arvo-Regular">San Francisco</p>
+                                </div>
+                            </div>
+                                                        <img class="img-responsive" src="./sasomobookings.com_files/ArtistBildAtish.jpg" style="min-width: 100%;">
+                        </a>                    </div>
+                                                        <div style="border: 1px solid white;" class="col-xs-3 artist-col" data-hidden="false" data-div-id="2">
+                        <a href="http://www.sasomobookings.com/#single-artist" data-scroll="smooth" class="loadartist" data-artist-id="9">                                                            <div style="background-color: rgba(163,75,148,0.4); height: 227px; width: 323px; position: absolute;"></div>
+                                                                                    <div class="inner-img text-center hidden">
+                                <i class="fa fa-2x fa-eye"></i>
+                                <div>
+                                    <p class="Montserrat-Regular">MIRA</p>
+                                    <p class="Arvo-Regular">Berlin</p>
+                                </div>
+                            </div>
+                                                        <img class="img-responsive" src="./sasomobookings.com_files/ArtistBildMira.jpg" style="min-width: 100%;">
+                        </a>                    </div>
+                                                        <div style="border: 1px solid white;" class="col-xs-3 artist-col" data-hidden="false" data-div-id="3">
+                        <a href="http://www.sasomobookings.com/#single-artist" data-scroll="smooth" class="loadartist" data-artist-id="3">                                                            <div style="background-color: rgba(31,33,39,0.4); height: 227px; width: 323px; position: absolute;"></div>
+                                                                                    <div class="inner-img text-center hidden">
+                                <i class="fa fa-2x fa-eye"></i>
+                                <div>
+                                    <p class="Montserrat-Regular">DANNY FABER</p>
+                                    <p class="Arvo-Regular">Berlin</p>
+                                </div>
+                            </div>
+                                                        <img class="img-responsive" src="./sasomobookings.com_files/ArtistBildDanny_Faber.jpg" style="min-width: 100%;">
+                        </a>                    </div>
+                                                        <div style="border: 1px solid white;" class="col-xs-3 artist-col" data-hidden="false" data-div-id="4">
+                        <a href="http://www.sasomobookings.com/#single-artist" data-scroll="smooth" class="loadartist" data-artist-id="16">                                                            <div style="background-color: rgba(163,75,148,0.4); height: 227px; width: 323px; position: absolute;"></div>
+                                                                                    <div class="inner-img text-center hidden">
+                                <i class="fa fa-2x fa-eye"></i>
+                                <div>
+                                    <p class="Montserrat-Regular">OCEANVS ORIENTALIS </p>
+                                    <p class="Arvo-Regular">Istanbul</p>
+                                </div>
+                            </div>
+                                                        <img class="img-responsive" src="./sasomobookings.com_files/ArtistBildOceanvs.jpg" style="min-width: 100%;">
+                        </a>                    </div>
+                                                        <div style="border: 1px solid white;" class="col-xs-3 artist-col" data-hidden="false" data-div-id="5">
+                        <a href="http://www.sasomobookings.com/#single-artist" data-scroll="smooth" class="loadartist" data-artist-id="15">                                                            <div style="background-color: rgba(163,75,148,0.4); height: 227px; width: 323px; position: absolute;"></div>
+                                                                                    <div class="inner-img text-center hidden">
+                                <i class="fa fa-2x fa-eye"></i>
+                                <div>
+                                    <p class="Montserrat-Regular">APARDE</p>
+                                    <p class="Arvo-Regular">Berlin</p>
+                                </div>
+                            </div>
+                                                        <img class="img-responsive" src="./sasomobookings.com_files/ArtistBildAparde.jpg" style="min-width: 100%;">
+                        </a>                    </div>
+                                                        <div style="border: 1px solid white;" class="col-xs-3 artist-col" data-hidden="false" data-div-id="6">
+                        <a href="http://www.sasomobookings.com/#single-artist" data-scroll="smooth" class="loadartist" data-artist-id="2">                                                            <div style="background-color: rgba(31,33,39,0.4); height: 227px; width: 323px; position: absolute;"></div>
+                                                                                    <div class="inner-img text-center hidden">
+                                <i class="fa fa-2x fa-eye"></i>
+                                <div>
+                                    <p class="Montserrat-Regular">CHRIS SCHWARZWALDER</p>
+                                    <p class="Arvo-Regular">Berlin</p>
+                                </div>
+                            </div>
+                                                        <img class="img-responsive" src="./sasomobookings.com_files/ArtistBildChris_Schwarzwalder.jpg" style="min-width: 100%;">
+                        </a>                    </div>
+                                                        <div style="border: 1px solid white;" class="col-xs-3 artist-col" data-hidden="false" data-div-id="7">
+                        <a href="http://www.sasomobookings.com/#single-artist" data-scroll="smooth" class="loadartist" data-artist-id="6">                                                            <div style="background-color: rgba(163,75,148,0.4); height: 227px; width: 323px; position: absolute;"></div>
+                                                                                    <div class="inner-img text-center hidden">
+                                <i class="fa fa-2x fa-eye"></i>
+                                <div>
+                                    <p class="Montserrat-Regular">JAKE THE RAPPER</p>
+                                    <p class="Arvo-Regular">Berlin</p>
+                                </div>
+                            </div>
+                                                        <img class="img-responsive" src="./sasomobookings.com_files/ArtistBildJtRapper.jpg" style="min-width: 100%;">
+                        </a>                    </div>
+                                                        <div style="border: 1px solid white;" class="col-xs-3 artist-col" data-hidden="false" data-div-id="8">
+                        <a href="http://www.sasomobookings.com/#single-artist" data-scroll="smooth" class="loadartist" data-artist-id="7">                                                            <div style="background-color: rgba(31,33,39,0.4); height: 227px; width: 323px; position: absolute;"></div>
+                                                                                    <div class="inner-img text-center hidden">
+                                <i class="fa fa-2x fa-eye"></i>
+                                <div>
+                                    <p class="Montserrat-Regular">JAN BLOMQVIST</p>
+                                    <p class="Arvo-Regular">Berlin</p>
+                                </div>
+                            </div>
+                                                        <img class="img-responsive" src="./sasomobookings.com_files/ArtistBildBlomqvist.jpg" style="min-width: 100%;">
+                        </a>                    </div>
+                                                                                                    <div style="border: 1px solid white;" class="col-xs-3 artist-col" data-hidden="false" data-div-id="9">
+                        <a href="http://www.sasomobookings.com/#single-artist" data-scroll="smooth" class="loadartist" data-artist-id="1">                                                            <div style="background-color: rgba(31,33,39,0.4); height: 227px; width: 323px; position: absolute;"></div>
+                                                                                    <div class="inner-img text-center hidden">
+                                <i class="fa fa-2x fa-eye"></i>
+                                <div>
+                                    <p class="Montserrat-Regular">BRITTA ARNOLD</p>
+                                    <p class="Arvo-Regular">Berlin</p>
+                                </div>
+                            </div>
+                                                        <img class="img-responsive" src="./sasomobookings.com_files/ArtistBildBritta.jpg" style="min-width: 100%;">
+                        </a>                    </div>
+                                                        <div style="border: 1px solid white;" class="col-xs-3 artist-col" data-hidden="false" data-div-id="10">
+                        <a href="http://www.sasomobookings.com/#single-artist" data-scroll="smooth" class="loadartist" data-artist-id="4">                                                            <div style="background-color: rgba(163,75,148,0.4); height: 227px; width: 323px; position: absolute;"></div>
+                                                                                    <div class="inner-img text-center hidden">
+                                <i class="fa fa-2x fa-eye"></i>
+                                <div>
+                                    <p class="Montserrat-Regular">DAVID DORAD</p>
+                                    <p class="Arvo-Regular">Berlin</p>
+                                </div>
+                            </div>
+                                                        <img class="img-responsive" src="./sasomobookings.com_files/ArtistBildDavidDorad.jpg" style="min-width: 100%;">
+                        </a>                    </div>
+                                                        <div style="border: 1px solid white;" class="col-xs-3 artist-col" data-hidden="false" data-div-id="11">
+                        <a href="http://www.sasomobookings.com/#single-artist" data-scroll="smooth" class="loadartist" data-artist-id="13">                                                            <div style="background-color: rgba(31,33,39,0.4); height: 227px; width: 323px; position: absolute;"></div>
+                                                                                    <div class="inner-img text-center hidden">
+                                <i class="fa fa-2x fa-eye"></i>
+                                <div>
+                                    <p class="Montserrat-Regular">SVEN DOHSE</p>
+                                    <p class="Arvo-Regular">Berlin</p>
+                                </div>
+                            </div>
+                                                        <img class="img-responsive" src="./sasomobookings.com_files/ArtistBildSven_Dohse.jpg" style="min-width: 100%;">
+                        </a>                    </div>
+                                                        <div style="border: 1px solid white;" class="col-xs-3 artist-col" data-hidden="false" data-div-id="12">
+                        <a href="http://www.sasomobookings.com/#single-artist" data-scroll="smooth" class="loadartist" data-artist-id="10">                                                            <div style="background-color: rgba(163,75,148,0.4); height: 227px; width: 323px; position: absolute;"></div>
+                                                                                    <div class="inner-img text-center hidden">
+                                <i class="fa fa-2x fa-eye"></i>
+                                <div>
+                                    <p class="Montserrat-Regular">NICO STOJAN</p>
+                                    <p class="Arvo-Regular">Berlin</p>
+                                </div>
+                            </div>
+                                                        <img class="img-responsive" src="./sasomobookings.com_files/ArtistBildNico_Stojan.jpg" style="min-width: 100%;">
+                        </a>                    </div>
+                                                                </div>
+        </div>
+        <section class="purple" style="margin-top: 1px;">
+            <div class="container">
+                <div class="heading pull-left booking">
+                    <h1>DO YOU WANT TO BOOK AN ARTIST?</h1>
+                    <p>An eye for details makes our work excellent</p>
+                </div>
+                <div class="pull-right" style="padding-top: 25px;">
+                    <a class="btn btn-transparent" href="http://www.sasomobookings.com/#booking" data-scroll="smooth">BOOKING //</a>
+                </div>
+            </div>
+        </section>
+        <div class="container " style="padding-top: 100px;" id="single-artist">
+            <div class="">
+                <div class="heading">
+                    <h1>ATISH</h1> 
+                    <p>European representation</p>
+                    <img src="./sasomobookings.com_files/line-head.png">
+                </div>
+                <div class="row">
+                    <div class="col-xs-9">             
+                        <div id="carouselArtist" class="carousel slide" data-ride="carousel">
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner">
+                                                                <div class="item">
+                                    <img src="./sasomobookings.com_files/SliderBildAtish01.jpg" style="width: 100%;">
+                                </div>
+                                                                                                <div class="item active">
+                                    <img src="./sasomobookings.com_files/SliderBildAtish02.jpg" style="width: 100%;">
+                                </div>
+                                                                                                <div class="item">
+                                    <img src="./sasomobookings.com_files/SliderBildAtish03.jpg" style="width: 100%;">
+                                </div>
+                                                            </div>
+                                                            <a class="left carousel-control" href="http://www.sasomobookings.com/#carouselArtist" role="button" data-slide="prev">
+                                    <img src="./sasomobookings.com_files/left.png">
+                                </a>
+                                <a class="right carousel-control" href="http://www.sasomobookings.com/#carouselArtist" role="button" data-slide="next">
+                                    <span><img src="./sasomobookings.com_files/right.png"></span>
+                                </a>
+                                                    </div>
+                        <br>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane fade in active" id="Biography">
+                                <p class="text-justify Arvo-Regular"></p><h3>Biography</h3><br>The Atish experience: deep, emotive, ecstatic. It is more than the beautiful sounds emanating from the speakers, though, it is also the man behind the decks: warm, compassionate, inviting. In an age of oversized DJ egos there is still an artist who is devoted to connecting with his audience, a humble soul with a pure passion for music. This is Atish.<br>
+<br>
+Atish occupies a rare space in dance music. At a time when most DJs rise to prominence primarily through their work as producers, Atish’s success has been realized through his total devotion to the art of DJing. What began at a small gig back in 2010 in San Francisco has since flowered into a magical journey around the world at clubs, festivals, and afterhours on six of the seven continents.<br>
+<br>
+His success comes as no surprise to anyone who has seen Atish DJ live or listened to one of his mixes. With a combination of sophistication and accessibility, his sets are expressive journeys in melodic deep house that create lasting emotional experiences for the listener.<br>
+<br>
+Atish is also a natural performer, engaging the crowd with a mixture of charisma and charm. He’s been known to don costumes and wigs when he spins, a playfulness that balances the strict discipline and obsessiveness he has for DJing.<br>
+<br>
+Atish’s natural talent and passion for music haven’t gone unnoticed. Lee Burridge asked Atish to play on the legendary Robot Heart bus sound system at Burning Man in 2011, and Atish has been invited back every year since. He’s also been honored to open for or tag with some of the most respected names in dance music including John Digweed, Danny Howells, Guy Gerber, M.A.N.D.Y., and Tyrant. Currently, Atish is a resident of San Francisco-based Listed Productions, the Desert Hearts family, a West Coast collaborative who put on the highly respected semi-annual Desert Hearts festival, and he is a resident of Behrouz’s Miami club, Do Not Sit on the Furniture.<br>
+<br>
+Atish has also developed a strong online presence through Soundcloud. A prolific mixer, Atish produces a monthly podcast series that has allowed him to express a deeper, moodier sound. Scrolling through his extensive catalog of mixes, one can hear an artist passionate about music and dedicated to the perfection of his craft. Having achieved so much in such a short amount of time, the dance music community is excited to see how far he can go.<p></p>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="Discography">
+                                <p class="text-justify Arvo-Regular"></p><h3>Discography</h3><br><p></p>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="Audio">
+                                <p class="text-justify Arvo-Regular"></p><h3>Audio</h3><br><iframe width="100%" height="450" scrolling="no" frameborder="no" src="./sasomobookings.com_files/saved_resource.html"></iframe><p></p>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="Video">
+                                <p class="text-justify Arvo-Regular"></p><h3>Video</h3><br><p></p>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="Dates">
+                                <h3>Dates</h3>
+                                <div class="Arvo-Regular">
+                                    <table class="table table-condensed">
+                                        <tbody>
+                                                                                                                                                <tr><td>2016-11-25</td><td>Bahnwärter Thiel</td><td>Munich</td><td>Germany</td><td><a style="color:black;" target="_blank" href="https://www.facebook.com/bahnwaerterthiel1/"><i class="fa fa-link"><i></i></i></a></td></tr>
+                                                                                                    <tr><td>2016-11-26</td><td>Silq</td><td>Düsseldorf</td><td>Germany</td><td></td></tr>
+                                                                                                    <tr><td>2016-12-23</td><td>Beachouse UAE</td><td>Dubai</td><td>United Arab Emirates</td><td></td></tr>
+                                                                                                                                    </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <h3>CATEGORIES</h3><br>
+                        <ul class="nav nav-pills nav-stacked" role="tablist">
+                            <li role="presentation" class="active"><a href="http://www.sasomobookings.com/#Biography" aria-controls="bio" role="tab" data-toggle="tab">Biography</a></li>
+                            <li role="presentation"><a href="http://www.sasomobookings.com/#Discography" aria-controls="dis" role="tab" data-toggle="tab">Discography</a></li>
+                            <li role="presentation"><a href="http://www.sasomobookings.com/#Audio" aria-controls="aud" role="tab" data-toggle="tab">Audio</a></li>
+                            <li role="presentation"><a href="http://www.sasomobookings.com/#Video" aria-controls="vid" role="tab" data-toggle="tab">Video</a></li>
+                            <li role="presentation"><a href="http://www.sasomobookings.com/#Dates" aria-controls="dat" role="tab" data-toggle="tab">Dates</a></li>
+                        </ul>
+                                                <ul class="nav nav-pills nav-stacked">
+                            <li role="presentation"><a target="_blank" href="http://www.sasomobookings.com/cm-pages/sasomo/files/Artists/presskit_atish.zip">Press Kit</a></li>
+                        </ul>
+                        <br>
+                        <h4>NEXT DATES</h4><br>
+                        <ul class="list-unstyled date">
+                                                                                                <li><a style="color:black;" target="_blank" href="https://www.facebook.com/bahnwaerterthiel1/">2016-11-25 Munich</a></li>
+                                                                    <li>2016-11-26 Düsseldorf</li>
+                                                                    <li>2016-12-23 Dubai</li>
+                                                                                    </ul>
+                        <br><br>
+                        <ul class="list-unstyled list-inline">
+                                                                                        <li><a href="https://soundcloud.com/atish" target="_blank"><img src="./sasomobookings.com_files/2.png"></a></li>
+                                                                                                                    <li><a href="https://www.facebook.com/atishmusic" target="_blank"><img src="./sasomobookings.com_files/4.png"></a></li>
+                                                    </ul>
+                    </div>
+                </div>
+            </div>
+        </div><br><br>
+    </div>
+    <div class="gap gap-50" style="background-image:url(cm-themes/sasomo/includes/img/slider/slider1.png);" id="contact">
+        <div class="container text-center">
+            <div class="row">
+                <br><br><br><br><br>
+                <h1 class="Arvo-Regular">OUR OFFICE</h1>
+                <p class="Arvo-Italic">Nadia El-Nadi</p>
+                <br><br>
+                <div class="col-xs-4">
+                    <i class="fa fa-3x fa-envelope-o"></i>
+                    <br><br>
+                    <a href="mailto:nadia@sasomobookings.com">nadia@sasomobookings.com</a>
+                </div>
+                <div class="col-xs-4">
+                    <i class="fa fa-3x fa-map-marker"></i>
+                    <br><br>
+                    Holzmarktstraße 19-23, 10243 Berlin
+                </div>
+                <div class="col-xs-4">
+                    <i class="fa fa-3x fa-phone"></i>
+                    <br><br>
+                    +49 (0) 163 360 30 60
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <br><br><br><br><br><br><br><br><br>
+        </div>
+    </div>
+<span class="bar"></span>
+<div class="foo"></div></div>
+                            <div style="margin-top: 0px; padding-top: 50px;" id="ajaxContainer2">
+<div style="z-index: -10;" class="parallax-image-wrapper parallax-image-wrapper-50" data-anchor-target="#news + .gap" data-bottom-top="transform:translate3d(0px, 300%, 0px)" data-top-bottom="transform:translate3d(0px, 0%, 0px)">
+   <div class="parallax-image parallax-image-50" style="background-image:url(cm-themes/sasomo/includes/img/slider/berlin.jpg)" data-anchor-target="#news + .gap" data-bottom-top="transform: translate3d(0px, -60%, 0px);" data-top-bottom="transform: translate3d(0px, 60%, 0px);">           
+   </div>
+</div>
+<div id="news">
+        <div class="container" style="padding-top: 100px;">
+        <div class="heading">
+            <h1>NEWS</h1>
+            <p>All news of the SASOMO artists and the agency</p>
+            <img src="./sasomobookings.com_files/line-head.png">
+        </div>
+        <div id="blogSlide" class="carousel slide blog-posts">
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner ">
+                                                                        <div class="item active">
+                                                                    <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-2 date">
+                                    <p class="Montserrat-Bold text-center">25</p>
+                                    <p class="Montserrat-Regular" style="text-transform: uppercase;">Sep 2015</p>
+                                </div>
+                                <div class="col-xs-8 blog-post">
+                                    <p class="Arvo-Regular">
+                                        </p><p><img alt="" src="./sasomobookings.com_files/twistedmanners.jpg" style="width:100%"><br>
+<br>
+<span style="color:#000000">Whoohooooo!!! We are so proud to announce that Nico Stojan's album "Twisted Manners" is out today on URSL!!!<br>
+<strong>*** </strong></span><strong><a href="http://www.decks.de/t/nico_stojan-twisted_manners/c4t-qt" target="_blank"><span style="color:#000000">Get your vinyl copy now on decks.de!</span></a></strong><span style="color:#000000"><strong> ***</strong><br>
+Preorder is possible and necessary</span> <img alt="smiley" src="./sasomobookings.com_files/regular_smile.png" style="height:23px; width:23px" title="smiley"><br>
+<br>
+<img alt="heart" src="./sasomobookings.com_files/heart.png" style="height:23px; width:23px" title="heart"><img alt="heart" src="./sasomobookings.com_files/heart.png" style="height:23px; width:23px" title="heart"><img alt="heart" src="./sasomobookings.com_files/heart.png" style="height:23px; width:23px" title="heart"></p>
+
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                                                                                                                                                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-2 date">
+                                    <p class="Montserrat-Bold text-center"> 1</p>
+                                    <p class="Montserrat-Regular" style="text-transform: uppercase;">Jun 2015</p>
+                                </div>
+                                <div class="col-xs-8 blog-post">
+                                    <p class="Arvo-Regular">
+                                        </p><p><img alt="" src="./sasomobookings.com_files/News_Aparde.jpg" style="width:100%"><br>
+<br>
+<span style="color:#000000">We are happy to announce our new family member: Aparde - LIVE!! Please welcome him!<br>
+<br>
+Aparde might sound like sensivity, melancholia and a significant contrast between impulsive dynamic and wide atmosphere. Along his roots in several bands and acoustic/electronic ambient and modern classic now he is based in electronica &amp; techno. Some may say they feel like drifting far away and dropping back into reality. Aparde's music embodies the essence of impression, packed in emotionally touching and exceptional tracks. He tries to transport this impressions as a producer since 2008 and as a Live-act since 2012.</span></p>
+
+<p><span style="color:#000000"><a href="https://soundcloud.com/aparde" target="_blank">https://soundcloud.com/aparde</a></span><br>
+&nbsp;</p>
+
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                                                <div class="clearfix"></div>                                                                                                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-2 date">
+                                    <p class="Montserrat-Bold text-center">25</p>
+                                    <p class="Montserrat-Regular" style="text-transform: uppercase;">Mär 2015</p>
+                                </div>
+                                <div class="col-xs-8 blog-post">
+                                    <p class="Arvo-Regular">
+                                        </p><p><iframe frameborder="0" height="450" scrolling="no" src="./sasomobookings.com_files/saved_resource(1).html" width="100%"></iframe><br>
+<br>
+<br>
+<span style="color:#000000">A really sunny release day with our beloved Britta Arnold! The "Sushi Roll" EP on KaterMukke is out today exclusive on Beatport with remixes by Kruse &amp; Nuernberg, Claude VonStroke &amp; Marc DePulse!</span></p>
+
+<p><a href="http://btprt.dj/1EFE7Y5" target="_blank">Go to Beatport</a></p>
+
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                                                                                                                                                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-2 date">
+                                    <p class="Montserrat-Bold text-center">17</p>
+                                    <p class="Montserrat-Regular" style="text-transform: uppercase;">Mär 2015</p>
+                                </div>
+                                <div class="col-xs-8 blog-post">
+                                    <p class="Arvo-Regular">
+                                        </p><p><iframe frameborder="0" height="450" scrolling="no" src="./sasomobookings.com_files/saved_resource(2).html" width="100%"></iframe></p>
+
+<p><span style="color:#000000">Some music for a sunny Tuesday afternoon!! Sven Dohse's last podcast he did for KaterMukke! <img alt="heart" src="./sasomobookings.com_files/heart.png" style="height:23px; width:23px" title="heart"></span></p>
+
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                                                <div class="clearfix"></div>                                        </div>
+                                                                            <div class="item">
+                                                                    <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-2 date">
+                                    <p class="Montserrat-Bold text-center">16</p>
+                                    <p class="Montserrat-Regular" style="text-transform: uppercase;">Mär 2015</p>
+                                </div>
+                                <div class="col-xs-8 blog-post">
+                                    <p class="Arvo-Regular">
+                                        </p><p><img alt="" src="./sasomobookings.com_files/CookieJar.jpg" style="width:100%"></p>
+
+<p><span style="color:#000000">And here it is!!! The video of Traffic Signs' &amp; Jake The Rapper's "Cookie Jar"<br>
+<br>
+Get your hands into...</span></p>
+
+<p><a href="http://thump.vice.com/en_us/article/get-your-hand-into-traffic-signs-jake-the-rappers-cookie-jar?utm_source=thumptwitterus" target="_blank">http://thump.vice.com/en_us/article/get-your-hand-into-traffic-signs-jake-the-rappers-cookie-jar?utm_source=thumptwitterus</a></p>
+
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                                                                                                                                                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-2 date">
+                                    <p class="Montserrat-Bold text-center">10</p>
+                                    <p class="Montserrat-Regular" style="text-transform: uppercase;">Mär 2015</p>
+                                </div>
+                                <div class="col-xs-8 blog-post">
+                                    <p class="Arvo-Regular">
+                                        </p><p><img alt="" src="./sasomobookings.com_files/150219_CJ_GIF_22_500px.gif" style="height:615px; width:500px"></p>
+
+<p><span style="color:#000000">Today is the vinyl release day of Traffic Signs' &amp; Jake The Rapper's&nbsp;"Cookie Jar" on Traffic Signs (remix by Steve Bug &amp; Joyce Muniz!</span><br>
+<br>
+<a href="http://www.deejay.de/TS7_-_Traffic_Signs_und_Jake_The_Rapper_-_Cookie_Jar_Steve_Bug_Joyce_Muniz_Rmxs_-_Vinyl__176399" target="_blank">You can buy your vinyl here on deejay!</a></p>
+
+<p><span style="color:#000000">Stay tuned for the digital and video release on 16.03.2015!!!</span></p>
+
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                                                <div class="clearfix"></div>                                                                                                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-2 date">
+                                    <p class="Montserrat-Bold text-center">29</p>
+                                    <p class="Montserrat-Regular" style="text-transform: uppercase;">Jan 2015</p>
+                                </div>
+                                <div class="col-xs-8 blog-post">
+                                    <p class="Arvo-Regular">
+                                        </p><p><iframe frameborder="no" height="450" scrolling="no" src="./sasomobookings.com_files/saved_resource(3).html" width="100%"></iframe></p>
+
+<p><span style="color:#000000">Here's the podberry Nico Stojan did for Monaberry! ...we... love... soundtracking your week! </span><img alt="heart" src="./sasomobookings.com_files/heart.png" style="height:23px; width:23px" title="heart"></p>
+
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                                                                                                                                                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-2 date">
+                                    <p class="Montserrat-Bold text-center">26</p>
+                                    <p class="Montserrat-Regular" style="text-transform: uppercase;">Jan 2015</p>
+                                </div>
+                                <div class="col-xs-8 blog-post">
+                                    <p class="Arvo-Regular">
+                                        </p><p><img alt="" src="./sasomobookings.com_files/JanBlomqvist_WallStreetJournal.jpg" style="width:100%"></p>
+
+<p><span style="color:#000000">Hello Monday! Having breakfast after a packed weekend and reading the Wall Street Journal feature with Jan Blomqvist! Whohoooo!</span></p>
+
+<p><a href="http://wsimag.com/entertainment/12892-the-dj-talks-music-and-mountains" target="_blank">http://wsimag.com/entertainment/12892-the-dj-talks-music-and-mountains</a></p>
+
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                                                <div class="clearfix"></div>                                        </div>
+                                                                            <div class="item">
+                                                                    <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-2 date">
+                                    <p class="Montserrat-Bold text-center">29</p>
+                                    <p class="Montserrat-Regular" style="text-transform: uppercase;">Nov 2014</p>
+                                </div>
+                                <div class="col-xs-8 blog-post">
+                                    <p class="Arvo-Regular">
+                                        </p><p><iframe frameborder="0" height="450" scrolling="no" src="./sasomobookings.com_files/britta-arnold-sushi-roll-ep-katermukke-kater092.html" width="100%"></iframe></p>
+
+<p><span style="color:#000000">Neues Katermukke Release von Dirty Doering und Sascha Cawa</span></p>
+
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                                                                                                                                                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-2 date">
+                                    <p class="Montserrat-Bold text-center">18</p>
+                                    <p class="Montserrat-Regular" style="text-transform: uppercase;">Nov 2014</p>
+                                </div>
+                                <div class="col-xs-8 blog-post">
+                                    <p class="Arvo-Regular">
+                                        </p><p><img alt="" src="./sasomobookings.com_files/c46-x0.jpg" style="width:100%"></p>
+
+<p style="text-align:justify"><span style="color:#000000">This is another proof, that when Djs from the heart evolving their own productions perfect club tracks come to life. The knowledge which elements and arrangement a great track needs, is running through their veins. David Dorad is a phenomenon like this! Living Dj culture from the very beginning, he is a founding member of the Bachstelzen crew from Berlin, who are running their own famous floor at Fusion Festival and he is resident Dj at Kater Blau and its predecessor the legendary Bar25. He celebrates his debut on URSL Records with Streets of Mexico. His friend Canson from Zurich and also a member of the URSL Network contributes a stunning remix for Pianinos.</span></p>
+
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                                                <div class="clearfix"></div>                                                                                                        <div class="col-xs-6">
+                            <div class="row">
+                                <div class="col-xs-2 date">
+                                    <p class="Montserrat-Bold text-center">13</p>
+                                    <p class="Montserrat-Regular" style="text-transform: uppercase;">Nov 2014</p>
+                                </div>
+                                <div class="col-xs-8 blog-post">
+                                    <p class="Arvo-Regular">
+                                        </p><p><img alt="" src="./sasomobookings.com_files/$_58.JPG" style="width:100%"></p>
+
+<div style="text-align: justify;"><span style="background-color:rgb(255, 255, 255); color:rgb(20, 24, 35); font-family:helvetica,arial,lucida grande,tahoma,verdana,arial,sans-serif; font-size:14px">Ihr Sommerkinder, ihr Festivalgänger, ihr In-Erinnerungen-Schwelger, ihr Soundliebhaber, ihr Weihnachtsgeschenke-Rätsler, ihr Vorfreude-Genießer, ihr Gutes-tun-Woller… Das TH!NK? OPENAIR hat was für euch! Es versteigert ab heute 10 THINK 2014-Poster, handsigniert von all euren Lieblingsartists und ein Festivalticket für das THINK 2015 kommt jeweils obendrauf!&nbsp;</span><br>
+<span style="background-color:rgb(255, 255, 255); color:rgb(20, 24, 35); font-family:helvetica,arial,lucida grande,tahoma,verdana,arial,sans-serif; font-size:14px">Und das beste: Alle Einnahmen plus einer Spende unsererseits gehen eins zu eins als Spende an das Kinderhospiz Bärenh</span><span style="background-color:rgb(255, 255, 255); color:rgb(20, 24, 35); font-family:helvetica,arial,lucida grande,tahoma,verdana,arial,sans-serif; font-size:14px">erz Leipzig e.V.! Alle weiteren Infos findet ihr auf den Ebay-Auktionen</span></div>
+
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                                                                                                </div>
+        </div>
+                <div class="text-center blog-directions hidden">
+            <a href="http://www.sasomobookings.com/#blogSlide" role="button" data-slide="prev"><i class="fa fa-4x fa-chevron-circle-left"></i></a>
+            <a href="http://www.sasomobookings.com/#blogSlide" role="button" data-slide="next"><i class="fa fa-4x fa-chevron-circle-right"></i></a>
+        </div>
+                <br><br><br><br>
+    </div>
+</div></div>
+
+<div class="gap gap-50" style="background-image:url(cm-themes/sasomo/includes/img/slider/slider1.png);" id="newsletter">
+    <div class="container text-center">
+        <div class="row"><br><br><br>
+            <form method="post" id="newsletterForm">
+                <img src="./sasomobookings.com_files/envelope-open.png">
+                <h1 class="Arvo-Regular">NEWSLETTER</h1>
+                <p class="Arvo-Italic">Do you want to stay tuned? Type in your email and enter subscribe</p>
+                <br><br>
+                <div class="form-group">
+                    <input required="required" id="newsletterMail" type="email" class="form-control form-newsletter Arvo-Regular" placeholder="Enter your mail..." name="newsletterEmail">
+                </div>
+                <div id="newsletterErfolg"></div>
+                <button type="submit" class="btn btn-1 Montserrat-Regular" id="subscribeNewsletter">SUBSCRIBE</button>
+            </form>
+        </div>
+        <div class="clearfix"></div><br><br><br>
+    </div>
+</div>
+<span class="bar"></span>
+<div class="foo"></div></div>
+                            <div style="margin-top: 0px; padding-top: 50px;" id="ajaxContainer3">
+<div class="container" style="padding-top: 100px; padding-bottom: 100px;">
+            <div class="heading">
+            <h1>sasomobookings.com</h1>
+            <p></p>
+            <img src="./sasomobookings.com_files/line-head.png">
+        </div>
+        <span class="Arvo-Regular about">
+        <p>SASOMO is a German word meaning something like 'Let The Good Times Roll', phrased in a time when the dancing started on a Saturday and wouldn't stop 'till Monday - when glitter replaced lipstick and confetti found its way into everyone's hair.</p>
+
+<p>This was happening to the soundtrack coming from one of Berlin's many reinvented wastelands, a place known globally for its electric impact on the culture of house and techno lovers around the world - a place more commonly known as bar25.&nbsp;As the demand for the bar25 sound went global, we were there, encouraging the artists we grew up with, danced with, and nurtured since the start far beyond our riverside wonder-club here in Berlin. Since then, our repertoire of artists have steadily SASOMO'd every corner of the map a piece of our sound.</p>
+
+<p>Many years have passed since this original explosion, yet both the artist roster and management of our agency has kept true to its ethos; good people; good music. As we showcase the KaterMukke label nights and coordinate the bookings and travel of our artists, this is an ethos that remains. SASOMObookings is an agency that moves with its artists and whose artists move with the times – letting the good times roll well past the Samstag, Sonntag und Montag that created our name.</p>
+
+    </span>
+    <div class="clearfix"></div>
+</div>
+<span class="bar"></span>
+<div class="foo"></div></div>
+                            <div style="margin-top: 0px; padding-top: 50px;" id="ajaxContainer4">
+    
+    <div id="booking" style="padding-top: 100px;"><br><br>
+        <div class="container">
+            <div class="heading-white">
+                <h1>BOOKING</h1>
+                <p>Don't hesitate to get in touch with us and book your artist</p>
+                <img src="./sasomobookings.com_files/line-head-white.png">
+            </div><br><br><br>
+            <form class="row" id="bookingform">
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control Arvo-Italic" placeholder="Artist" name="booking-Artist" required="required">
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control Arvo-Italic" placeholder="Date" name="booking-Date" required="required">
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control Arvo-Italic" placeholder="Name" name="booking-Name" required="required">
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <input type="email" class="form-control Arvo-Italic" placeholder="Mail" name="booking-Mail" required="required">
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <input type="tel" class="form-control Arvo-Italic" placeholder="Phone" name="booking-Phone" required="required">
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control Arvo-Italic" placeholder="Location" name="booking-Location" required="required">
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control Arvo-Italic" placeholder="City" name="booking-City" required="required">
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control Arvo-Italic" placeholder="Country" name="booking-Country" required="required">
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <textarea class="form-control Arvo-Italic" required="required" placeholder="Additional Message" name="booking-Additional"></textarea>
+                    </div>
+                    <div class="pull-right">
+                        <button type="submit" class="btn btn-1 Montserrat-Regular"><i class="fa fa-paper-plane-o"></i> SUBMIT</button>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <br><br><br><div id="bookingErfolg"><br></div><br><br><br><br>
+            </form>
+        </div>
+    </div>
+<span class="bar"></span>
+<div class="foo"></div></div>
+                            <div style="margin-top: 0px; padding-top: 50px;" id="ajaxContainer5">
+<div class="contact2 container" style="padding-top: 100px;"><br>
+    <div class="heading">
+        <h1>CONTACT</h1>
+        <p>Send us a mail</p>
+        <img src="./sasomobookings.com_files/line-head.png">
+    </div>
+    <br><br><br>
+    <div class="row Arvo-Regular">
+        <div class="col-xs-4">
+            <i class="fa fa-2x fa-map-marker pull-left"></i><div class="pull-left purple">Holzmarktstraße 19-23, 10243 Berlin</div>
+        </div>
+        <div class="col-xs-4">
+            <i class="fa fa-2x fa-envelope-o pull-left"></i><div class="pull-left purple"><a class="purple" href="mailto:nadia@sasomobookings.com">nadia@sasomobookings.com</a></div>
+        </div>
+        <div class="col-xs-4">
+            <i class="fa fa-2x fa-phone pull-left"></i><div class="pull-left purple">+49 (0) 163 360 30 60</div>
+        </div>
+    </div><br><br><br><br>
+</div>
+<img src="./sasomobookings.com_files/map.png" class="img-responsive">
+<footer>
+    <div class="container Arvo-Bold">
+        <div class="pull-left">
+            Created with <img src="./sasomobookings.com_files/herz.png"> by <a href="http://www.kohrmedia.de/" target="_blank">KOHRMedia.de</a>. All Rights Reserved
+        </div>
+        <div class="pull-right">
+                        <a href="http://www.sasomobookings.com/#modal-impressum" data-toggle="modal" data-target="#modal-impressum">Impressum</a>
+                    </div>
+    </div>
+        <div class="modal fade" id="modal-impressum" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="margin-top: 50px;">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Impressum</h4>
+                </div>
+                <div class="modal-body">
+                    <p>SASOMObookings.com<br>
+Nadia El-Nadi<br>
+Pasteurstr. 6<br>
+10407 Berlin<br>
+<br>
+USt.-ID: DE256933941</p>
+
+<p>Tel: +49 (0) 163 360 30 60<br>
+Fax: +49 (0) 30 94 05 50 40<br>
+<a href="mailto:nadia@sasomobookings.com">nadia@sasomobookings.com</a></p>
+
+<p>Wenn Sie Fragen zum Unternehmen oder unserem Internetauftritt haben oder sollten Sie der Ansicht sein, dass Inhalte unserer Website Urheberrechte oder sonstige Leistungsschutzrechte verletzen, dann schicken Sie uns einfach eine E-Mail.</p>
+
+<p>Wir freuen uns immer über Feedback und Anregungen.</p>
+
+<p>Haftungsausschluss Links</p>
+
+<p>Die Internetseite www.sasomobookings.com enthält links zu Websites Dritter, für deren Inhalt wir keine rechtliche Verantwortung übernehmen können; diese liegt allein bei den Anbietern, bzw. den Betreibern der betreffenden Seiten. Hiermit distanzieren wir uns ausdrücklich von den rechtswidrigen Inhalten aller verlinkten Seiten und übernehmen hierfür auch keinerlei Gewähr.<br>
+Inhalt</p>
+
+<p>Die Informationen und Inhalte der Internetseite www.sasomobookings.com werden mit größter Sorgfalt erstellt und geprüft. Wir können allerdings für die fortlaufende Richtigkeit, Vollständigkeit und Aktualität sowie deren ständige Verfügbarkeit keinerlei Gewähr übernehmen. Urheberrecht<br>
+Es gilt das deutsche und internationale Urheberrecht. epubli ist stets darum bemüht, die Urheberrechte anderer zu beachten, bzw. auf eigene und gemeinfreie Werke zurückzugreifen. Copyright Sämtliche auf dieser Homepage genannten Namen, Bezeichnungen und Logos sind eingetragene Warenzeichen und somit Eigentum der jeweiligen Rechteinhaber.</p>
+
+<p>Datenschutz</p>
+
+<p>Sasomobookings erhebt, verarbeitet und nutzt Ihre Daten nur im Rahmen der gesetzlichen Bestimmungen. Diese Datenschutzerklärung gilt nur für die Nutzung der von uns angebotenen Website. Sie gilt nicht für die Websites anderer Dienstanbieter, auf die wir nur mit einem Link verweisen. Wir weisen darauf hin, dass die Datenübertragung im Internet Sicherheitslücken aufweisen kann und daher ein lückenloser Schutz vor dem Zugriff Dritter nicht möglich ist. Für den Umgang mit personenbezogenen Daten der Nutzer beachten Sie bitte auch unsere Datenschutzerklärung.</p>
+
+<p>Unsere Datenschutzbestimmungen</p>
+
+<p>Dieser Text zeigt, wie persönliche Daten (wie etwa Name, Adresse, E-Mail und Telefonnummer) von Sasomobookings behandelt werden. Personenbezogene Daten sind solche, die Auskunft über persönliche oder sachliche Verhältnisse einer bestimmten (natürlichen) Person geben.<br>
+Der Schutz personenbezogener Daten ist für Sasomobookings eine wichtige Angelegenheit. Wir unterliegen den gesetzlichen Bestimmungen zum Datenschutz und der Datensicherheit.<br>
+Nach diesen Vorschriften dürfen wir personenbezogene Daten erheben, verarbeiten und nutzen soweit dies zur Begründung, zu der inhaltlichen Ausgestaltung oder änderung des Vertragsverhältnisses über die Nutzung unseres Dienstes, zur Ermöglichung der Inanspruchnahme unserer Dienste sowie deren Abrechnung erforderlich ist.<br>
+Gebrauch und Speicherung von Daten</p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-black" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </footer>
+<span class="bar"></span>
+<div class="foo"></div></div>
+                            <script type="text/javascript" src="./sasomobookings.com_files/skrollr.min.js.Download"></script>
+        <div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div></body></html>
